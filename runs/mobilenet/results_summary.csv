@@ -1,0 +1,2 @@
+model,best_val_acc,test_acc,inference_time_ms,num_classes
+mobilenet,69.60893854748603,68.07681603117173,6.555345043179188,34
