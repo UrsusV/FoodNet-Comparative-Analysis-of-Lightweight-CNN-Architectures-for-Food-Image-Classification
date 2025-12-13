@@ -1,0 +1,2 @@
+model,best_val_acc,test_acc,inference_time_ms,num_classes
+efficientnet,80.50279329608938,77.67881992763708,11.043568225481568,34
