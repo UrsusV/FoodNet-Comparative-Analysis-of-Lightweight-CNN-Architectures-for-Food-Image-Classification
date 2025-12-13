@@ -10,17 +10,16 @@ FoodNet benchmark for food image classification using lightweight CNNs (MobileNe
 - Model evaluation: accuracy, F1-score, inference latency
 - Confusion matrices and performance tables
 
-## 📊 Results (20 Epochs, GPU Training)
+## 📊 Results (20 Epochs, GPU Training + Inference)
 
 | Model          | Test Acc | Val Acc (Best) | Inference (ms/img) | Trainable Params (M) |
 |----------------|----------|----------------|-------------------|---------------------|
-| MobileNetV3   | **68.08%** | 69.61%        | **6.56**         | 1.55               |
-| EfficientNet-B0 | **77.68%** | **80.50%**   | 11.04            | 4.05               |
-| ResNet18      | 66.46%     | 67.60%        | 8.95             | 11.19              |
+| **EfficientNet-B0** | **77.68%** | **80.50%**   | **4.93**         | 4.05               |
+| MobileNetV3   | 68.08%     | 69.61%        | 5.64             | 1.55               |
+| ResNet18      | 66.46%     | 67.60%        | 5.37             | 11.19              |
 
 **Key Takeaways:**
-- EfficientNet-B0 dominates accuracy (77.68% test) with strong generalization
-- MobileNetV3 fastest inference (6.56ms) at 68% accuracy - best CPU deployment
-- ResNet18 balanced but lags in accuracy despite most parameters
-
+- **EfficientNet-B0 is the clear winner**: Highest accuracy + fastest inference
+- All models under 6ms/image → **Real-time capable** (170+ FPS on GPU)
+- MobileNetV3: Most parameter-efficient for edge deployment
 
